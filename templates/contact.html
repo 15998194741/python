@@ -1,0 +1,91 @@
+{% extends 'head.html' %}
+{% block content_block %}
+
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td align="center" background="/static/images/abanbj_03.jpg"><img src="/static/images/timg.jpg" width="1000" height="180" /></td>
+  </tr>
+</table>
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="24" background="/static/images/in_12.jpg">&nbsp;</td>
+  </tr>
+</table>
+<table width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="280" valign="top"><table width="260" border="0" align="left" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="260" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="26%" height="30" align="left" class="font_14"><strong>公司员工</strong></td>
+            <td width="47%" align="left" class="font_999">Staff</td>
+{#            <td width="27%" align="right"><a id="iop" href="#" target="_blank">在线咨询</a></td>#}
+{#              {% if  not request.user.is_authenticated %}#}
+{#              {% if  not request.user.is_authenticated %}#}
+{#                 <script type="text/javascript">#}
+{#$(function(){#}
+{#    $('#iop').click(function () {#}
+{#        alert('请先登录')#}
+{#        $('#myModal').modal('show');#}
+{#         $('#plp').click(function () {#}
+{#        window.history.back() })#}
+{##}
+{#    })#}
+{##}
+{#});#}
+{#</script>#}
+{#                  {% else %}#}
+{##}
+{#                                   <script type="text/javascript">#}
+{#$(function(){#}
+{#    $('#iop').click(function () {#}
+{#        window.open({% url 'chat' %})#}
+        {#window.location.replace({% url 'chat' %}) #}
+{#    })#}
+{##}
+{#    })#}
+{##}
+{##}
+{#</script>#}
+
+{#              {% endif %}#}
+          </tr>
+        </table>
+              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+         {% for foo in b %}
+                <tr>
+                    {% for i in foo %}
+                        <td height="103" align="center"  onclick="window.location.replace('/test1/?a='+{{ i.id }})"><img   onmouseout="this.height=76;this.weight=76;" onmouseover="this.weight=100;this.height=100;" src="{{ i.head }}" width="76" height="76" )"/><br>{{ i.name }}</td>
+                    {% endfor %}
+
+                </tr>
+                {% endfor %}
+            </table></td>
+      </tr>
+    </table></td>
+    <td width="720" valign="top"><table width="100%" border="0" align="center" cellpadding="5" cellspacing="0">
+      <tr>
+        <td width="71%" align="left" class="font_14 xuxian"><strong>联系我们</strong></td>
+      </tr>
+    </table>
+        <table width="100%" border="0" cellpadding="0" cellspacing="20" class="hg_30">
+          <tr valign="top">
+            <td align="left"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="34%" valign="top"><span class="font_14"><strong>辽宁国仁医疗评估咨询有限公司</strong></span><br />
+地址：辽宁省沈阳市浑南区国际贸易中心B座702 <br />
+电话：024-23367066 <br />
+手机：15998194741<br />
+QQ：760062051<br />
+邮箱：<br />
+邮编： 110000</td>
+                <td width="66%"><img src="/static/images/area.png" width="455" height="354" /></td>
+              </tr>
+            </table></td>
+          </tr>
+      </table></td>
+  </tr>
+</table>
+
+{% endblock %}

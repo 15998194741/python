@@ -1,0 +1,75 @@
+{% extends 'head.html' %}
+{% block content_block %}
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="500">
+      <div id="full-screen-slider">
+        <ul id="slides">
+            <a href="{% url 'product' %}"><li><img src="/static/images/pro.jpg" width="100%" height="500" /></li></a>
+            <a href="{% url 'case' %}"><li><img src="/static/images/case.jpeg" width="100%" height="500" /></li></a>
+            <a href="{% url 'new' %}"><li><img src="/static/images/news.jpg" width="100%" height="500" /></li></a>
+            <a href="{% url 'about' %}"><li><img src="/static/images/aboutus.jpg" width="100%" height="500" /></li></a>
+            <a href="{% url 'contact' %}"><li><img src="/static/images/timg.jpg" width="100%" height="500" /></li></a>
+        </ul>
+      </div>
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="24" background="/static/images/in_12.jpg">&nbsp;</td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="180"><table width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="260" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td width="26%" align="left" class="font_14"><strong><a href="{% url 'product' %}">产品中心</a></strong></td>
+              <td width="47%" align="left" class="font_999">Product</td>
+              <td width="27%" align="center"></td>
+            </tr>
+          </table>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                {% for foo in b %}
+
+
+
+              <tr>
+              {% for i in foo %}
+
+
+
+                <td height="103" align="left"><a href="{% url 'productsite' %}?a={{ i.id }}"><img src="{{ i.P_image }}" width="76" height="76" /></a></td>
+
+                  {% endfor %}
+              </tr>
+                {% endfor %}
+          </table></td>
+        <td valign="top"><table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+              <td width="19%" align="left" class="font_14"><strong><a href="{% url 'new' %}">新闻咨询</a></strong></td>
+              <td width="71%" align="left" class="font_999">News</td>
+              <td width="10%" align="center"></td>
+            </tr>
+            <tr>
+              <td height="10" colspan="3" align="left" ><table width="100%" border="0" align="center" cellpadding="3" cellspacing="0">
+                {% for foo in a %}
+                    <tr>
+                    <td align="left" class="xuxian"><a href="{% url 'text' %}?a={{ foo.id }}" target="_blank">{{ foo.title }}</a></td>
+                    <td align="left" class="xuxian">{{ foo.date_publish }}</td>
+                  </tr>
+                {% endfor %}
+              </table></td>
+            </tr>
+        </table></td>
+        <td width="332" valign="top"><a href="{% url 'case' %}"><img src="/static/images/case.jpeg" width="332" height="122" /></a></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+{% endblock %}
+{% include 'end.html' %}
+
+

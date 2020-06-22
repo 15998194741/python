@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="shortcut icon" href="/static/favicon.ico">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>辽宁国仁医疗评估咨询有限公司</title>
+<link href="/static/css/css.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="data:;base64,=">
+    <link rel="icon" href="data:image/ico;base64,aWNv">
+<script type="text/javascript" src="/static/js/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="/static/js/jquery.jslides.js"></script>
+
+</head>
+<script type="text/javascript" src="/static/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css" />
+<link rel="shortcut icon" href="/static/favicon.ico">
+<div class="modal fade" id="myModal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+					  <button type="button" class="close" id="plp" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			</div>
+			<div class="modal-body">
+					<h4 class="modal-title" align="center">登录框</h4>
+					<br/>
+					<form class="form-horizontal" action="{% url 'loglogin' %}" method="post" role="form">
+						<div class="form-group">
+							<label for="name" class="col-sm-offset-2 col-sm-2 control-label">账号</label>
+							<div class="col-sm-5">
+								<input type="text" class="form-control" id="name" name="username" placeholder="请输您的入账号">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="password" class="col-sm-offset-2 col-sm-2 control-label">密码</label>
+							<div class="col-sm-5">
+								<input type="password" class="form-control"  name="password" id="password" placeholder="请输入您的密码">
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-offset-4 col-sm-5">
+								<button id="submitBtn" type="submit" class="btn btn-default btn-block btn-primary">登录</button>
+							</div>
+						</div>
+                        <a  href="#"  id="qweasd">还没有账号？赶快注册吧！</a>
+						</form>
+			</div>
+			<div class="modal-footer">
+			</div>
+		</div>
+		<!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<script type="text/javascript" src="/static/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css" />
+<link rel="shortcut icon" href="/static/favicon.ico">
+<div class="modal fade" id="modaomy">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+					  <button type="button" class="close" id="lpl" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			</div>
+			<div class="modal-body">
+					<h4 class="modal-title" align="center">注册框</h4>
+					<br/>
+					<form class="form-horizontal" action="{% url 'register' %}" method="post" role="form">
+						<div class="form-group">
+							<label for="name" class="col-sm-offset-2 col-sm-2 control-label">用户名</label>
+							<div class="col-sm-5">
+								<input type="text" class="form-control" id="name" name="username" placeholder="请输您的入账号">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="password" class="col-sm-offset-2 col-sm-2 control-label">密码</label>
+							<div class="col-sm-5">
+								<input type="password" class="form-control"  name="password" id="password" placeholder="请输入您的密码">
+							</div>
+						</div>
+                        <div class="form-group">
+							<label for="password" class="col-sm-offset-2 col-sm-2 control-label">手机号</label>
+							<div class="col-sm-5">
+								<input type="text" class="form-control"  name="telephone" id="telephone" placeholder="请输入您的电话">
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-offset-4 col-sm-5">
+								<button id="submitBtn" type="submit" class="btn btn-default btn-block btn-primary">注册</button>
+							</div>
+{#                            <a id="qwe">已有账号？快去登录</a>#}
+						</div>
+						</form>
+			</div>
+			<div class="modal-footer">
+			</div>
+		</div>
+		<!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<script type="text/javascript">
+$(function(){
+    $('#qqq').click(function () {
+        $('#myModal').modal('show');
+         $('#plp').click(function () {
+        window.history.back() })
+
+    $('#www').click(function () {
+        $('#modaomy').modal('show');
+         $('#lpl').click(function () {
+        window.history.back()})
+    })
+        $('#qweasd').click(function () {
+                 $('#modaomy').modal('show');
+        })
+        {#$('#qwe').click(function () {#}
+        {#$('#myModal').modal('show');#}
+        {# $('#plp').click(function () {#}
+        {#window.history.back()})#}
+    })
+
+});
+</script>
+
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" background="/static/images/in_02.jpg">
+  <tr>
+    <td height="99"><table width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="328" height="99" align="center" background="/static/images/in_04.jpg"><strong style="font-size:20px;text-shadow:5px 2px 6px #000;">辽宁国仁医疗评估咨询有限公司</strong>
+            <br><i>国仁医院管理研究院</i></td>
+        <td width="672" valign="middle">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" class="font_wr">
+          <tr>{% if not request.user.is_authenticated %}
+            <td height="35" align="right"><a href="#" id="qqq">登录</a> - <a href="#" id="www" >注册</a> 　 </td>
+              {% else %}
+              <td height="35" align="right"><a href="">{{request.user.username}}你好</a> - <a href="{% url 'logout' %}">退出</a> 　 </td>
+              {% endif %}
+          </tr>
+          <tr>
+            <td height="50" align="right" class="font_15">
+                <table width="95%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td align="center"><strong><a href="{% url 'index' %}">首  页</a></strong></td>
+                <td align="center"><img src="/static/images/shux.jpg" width="2" height="16" /></td>
+                <td align="center"><strong><a href="{% url 'new' %}">新闻资讯</a></strong></td>
+                <td align="center"><img src="/static/images/shux.jpg" width="2" height="16" /></td>
+                <td align="center"><strong><a href="{% url 'product' %}">产品中心</a></strong></td>
+                <td align="center"><img src="/static/images/shux.jpg" width="2" height="16" /></td>
+                <td align="center"><strong><a href="{% url 'case' %}">典型案例</a></strong></td>
+                <td align="center"><img src="/static/images/shux.jpg" width="2" height="16" /></td>
+                <td align="center"><strong><a href="{% url 'about' %}">关于我们</a></strong></td>
+                <td align="center"><img src="/static/images/shux.jpg" width="2" height="16" /></td>
+                <td align="center"><strong><a href="{% url 'contact' %}">联系我们</a></strong></td>
+                  <td align="center"><img src="/static/images/shux.jpg" width="2" height="16" /></td>
+                <td align="center"><strong><a href="{% url 'chat' %}" target='_blank' >留言板</a></strong></td>
+              </tr>
+            </table>
+            </td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+{% block content_block %}{% endblock %}
+{% if not request.user.is_staff %}
+
+{% block end_block %}
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" style="position:fixed;bottom:0 ">
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="79" background="/static/images/in_28.jpg">
+        <table width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="195" align="center"><img src="/static/images/424e7b7ef0f677be58f09bf35536e2e.png" width="174" height="34" /></td>
+        <td width="39" align="center"><img src="/static/images/in_31.jpg" width="4" height="50" /></td>
+        <td width="766" align="left" class="font_999">地址：辽宁省沈阳市浑南区国际贸易中心B座702   电话：024-23367066   <br />
+          辽宁国仁医疗评估咨询有限公司 </td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+ {% endblock %} {% endif %}
